@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Program - NCIT 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3d6f;
+            --secondary: #c12a35;
+            --accent: #e6c35c;
+            --light: #f8f9fa;
+            --dark: #1a1e23;
+            --gray: #6c757d;
+            --text-main: #333333;
+            --text-light: #555555;
+            --bg-body: #f4f7f6;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(30, 61, 111, 0.12);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Thai', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-up {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        header {
+            background: rgba(30, 61, 111, 0.98);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-text h1 {
+            font-size: 2rem;
+            margin-bottom: 0px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header-date {
+            text-align: right;
+        }
+
+        .header-date h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .header-date p {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        nav {
+            padding-top: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding-bottom: 5px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 150%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(30, 61, 111, 0.98);
+            backdrop-filter: blur(10px);
+            min-width: 280px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--accent);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            top: 100%;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent);
+            padding-left: 2rem;
+        }
+
+        .page-header {
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 61, 111, 0.9) 0%, rgba(19, 39, 71, 0.95) 100%), url("img/NCIT.jpg") center/cover fixed;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+') repeat;
+            opacity: 0.5;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coming-soon-box {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            border-top: 5px solid var(--accent);
+        }
+
+        .coming-soon-box i {
+            font-size: 5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--accent), #ff9d00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .coming-soon-box h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .coming-soon-box p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        .dl-zoom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-family: 'Kanit', sans-serif;
+            background: var(--primary);
+            padding: 12px 24px;
+            border-radius: 30px;
+        }
+
+        .dl-zoom:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            background: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 0 1.5rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 12px;
+            color: var(--white);
+            font-size: 1.3rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-section li i {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .coming-soon-box h2 {
+                font-size: 2.2rem;
+            }
+
+            .coming-soon-box i {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>nCIT 2026</h1>
+                    </div>
+                </div>
+                <div class="header-date">
+                    <h2>12-14 พฤศจิกายน 2569</h2>
+                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="menu" id="mainMenu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+
+                    <!-- ncit2026 -->
+                    <!--<li class="dropdown">
+                        <a href="">nCIT2026 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="keynote.html">วิทยากรรับเชิญ</a></li>
+                            <li><a href="committee.html">คณะกรรมการ</a></li>
+                            
+                        </ul>
+                    </li>-->
+
+                    <!-- Program -->
+                    <li class="dropdown">
+                        <a href="">กำหนดการ <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="proceedings.html">Proceedings</a></li>
+                            <li><a href="presentation.html">แนวทางการนำเสนอผลงาน</a></li>
+
+                            <!-- Sub-dropdown -->
+                            <li class="dropdown-sub">
+                                <a href="program.html">โปรแกรมกำหนดการ <i class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-sub-content">
+                                    <li><a href="online.html">Online</a></li>
+                                    <li><a href="onsite.html">Onsite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Submission -->
+                    <li class="dropdown">
+                        <a href="">การส่งผลงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="submission.html">การส่งบทความ</a></li>
+                            <!--<li><a href="camera.html">คู่มือสำหรับเอกสารฉบับสมบูรณ์</a></li>
+                            <li><a href="sessions.html">รอบปกติ และ รอบพิเศษ</a></li>-->
+                        </ul>
+                    </li>
+
+                    <!-- Venue -->
+                    <li class="dropdown">
+                        <a href="">สถานที่จัดงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="venue.html">สถานที่จัดงาน</a></li>
+                            <li><a href="hotels.html">แนะนำโรงแรม</a></li>
+                            <li><a href="transport.html">การเดินทาง</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li class="menu-right register-btn">
+                        <a href="registration.html" class="btn-register">ลงทะเบียน</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="page-header">
+        <div class="container page-header-content">
+            <h1 class="animate-up">Online Program</h1>
+            <p class="animate-up delay-1">โปรแกรมกำหนดการแบบออนไลน์</p>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="container">
+            <div class="coming-soon-box animate-up">
+                <i class="fa-solid fa-desktop"></i>
+                <h2>Coming Soon</h2>
+                <p>ข้อมูลโปรแกรมกำหนดการออนไลน์กำลังเตรียมการ โปรดติดตามอัปเดตข้อมูลเพิ่มเติมได้ในเร็วๆ นี้<br>Online
+                    program schedule is being prepared. Please check back later.</p>
+                <a href="ncit2026.html" class="dl-zoom">
+                    <i class="fa-solid fa-arrow-left"></i> กลับสู่หน้าหลัก
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>สำนักจัดการประชุม NCIT 2026</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-building"></i> <span>คณะเทคโนโลยีสารสนเทศ<br>มหาวิทยาลัยสยาม</span>
+                        </li>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>กรุงเทพมหานคร, ประเทศไทย</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>ncit2026@siam.edu</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+66 (0) 2-457-0068, 2-867-8000<br>ต่อ 5130</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>เมนูด่วน</h3>
+                    <ul>
+                        <li><a href="ncit2026.html#home"><i class="fa-solid fa-angle-right"></i> หน้าแรก</a></li>
+                        <li><a href="ncit2026.html#dates"><i class="fa-solid fa-angle-right"></i> กำหนดการ</a></li>
+                        <li><a href="submission.html"><i class="fa-solid fa-angle-right"></i> การส่งบทความ</a></li>
+                        <li><a href="ncit2026.html#registration"><i class="fa-solid fa-angle-right"></i> ลงทะเบียน</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ติดตามเรา</h3>
+                    <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.7);">
+                        ติดตมข่าวสารและการอัปเดตล่าสุดผ่านช่องทางโซเชียลมีเดียของเรา</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 NCIT - การประชุมวิชาการระดับชาติทางด้านเทคโนโลยีสารสนเทศ ครั้งที่ 18. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

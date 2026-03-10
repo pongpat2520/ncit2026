@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keynote Speakers - nCIT 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>nCIT 2026</h1>
+                    </div>
+                </div>
+                <div class="header-date">
+                    <h2>12-14 พฤศจิกายน 2569</h2>
+                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="menu" id="mainMenu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+
+                    <!-- ncit2026 -->
+                    <!--<li class="dropdown">
+                        <a href="">nCIT2026 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="keynote.html">วิทยากรรับเชิญ</a></li>
+                            <li><a href="committee.html">คณะกรรมการ</a></li>
+                            
+                        </ul>
+                    </li>-->
+
+                    <!-- Program -->
+                    <li class="dropdown">
+                        <a href="">กำหนดการ <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="proceedings.html">Proceedings</a></li>
+                            <li><a href="presentation.html">แนวทางการนำเสนอผลงาน</a></li>
+
+                            <!-- Sub-dropdown -->
+                            <li class="dropdown-sub">
+                                <a href="program.html">โปรแกรมกำหนดการ <i class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-sub-content">
+                                    <li><a href="online.html">Online</a></li>
+                                    <li><a href="onsite.html">Onsite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Submission -->
+                    <li class="dropdown">
+                        <a href="">การส่งผลงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="submission.html">การส่งบทความ</a></li>
+                            <!--<li><a href="camera.html">คู่มือสำหรับเอกสารฉบับสมบูรณ์</a></li>
+                            <li><a href="sessions.html">รอบปกติ และ รอบพิเศษ</a></li>-->
+                        </ul>
+                    </li>
+
+                    <!-- Venue -->
+                    <li class="dropdown">
+                        <a href="">สถานที่จัดงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="venue.html">สถานที่จัดงาน</a></li>
+                            <li><a href="hotels.html">แนะนำโรงแรม</a></li>
+                            <li><a href="transport.html">การเดินทาง</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li class="menu-right register-btn">
+                        <a href="registration.html" class="btn-register">ลงทะเบียน</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Keynote Speakers</h2>
+                <p>Renowned experts sharing cutting-edge insights in Information Technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="keynote" style="background-color: #f8f9fa; padding: 4rem 0;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Keynote Speakers</h2>
+                </div>
+
+                <style>
+                    .keynote-card {
+                        background: #fff;
+                        border-radius: 20px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                        overflow: hidden;
+                        margin-bottom: 3rem;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        border: 1px solid rgba(0, 0, 0, 0.03);
+                    }
+
+                    .keynote-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+                    }
+
+                    .keynote-header {
+                        background: linear-gradient(135deg, var(--bangkok-blue), #112a52);
+                        color: #fff;
+                        padding: 2.5rem;
+                        display: flex;
+                        gap: 2rem;
+                        align-items: center;
+                    }
+
+                    .speaker-avatar-large {
+                        width: 120px;
+                        height: 120px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 4.5rem;
+                        color: var(--bangkok-gold);
+                        flex-shrink: 0;
+                        border: 3px solid rgba(255, 255, 255, 0.2);
+                    }
+
+                    .speaker-info h3 {
+                        font-size: 1.8rem;
+                        margin-bottom: 0.5rem;
+                        color: #fff;
+                    }
+
+                    .speaker-info .role {
+                        font-size: 1.1rem;
+                        color: var(--bangkok-gold);
+                        font-weight: 600;
+                        margin-bottom: 0.2rem;
+                    }
+
+                    .speaker-info .affiliation {
+                        font-size: 1rem;
+                        color: rgba(255, 255, 255, 0.8);
+                        font-style: italic;
+                    }
+
+                    .keynote-body {
+                        padding: 2.5rem;
+                    }
+
+                    .keynote-title-box {
+                        background: linear-gradient(to right, rgba(193, 42, 53, 0.05), transparent);
+                        border-left: 4px solid var(--bangkok-red);
+                        padding: 1.5rem;
+                        margin-bottom: 2rem;
+                        border-radius: 0 8px 8px 0;
+                    }
+
+                    .keynote-title-box h4 {
+                        color: var(--bangkok-red);
+                        font-size: 0.9rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .keynote-title-box h3 {
+                        color: var(--bangkok-blue);
+                        font-size: 1.4rem;
+                        line-height: 1.4;
+                    }
+
+                    .keynote-content h5 {
+                        color: var(--bangkok-blue);
+                        font-size: 1.2rem;
+                        margin: 1.5rem 0 0.8rem 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .keynote-content h5 i {
+                        color: var(--bangkok-gold);
+                    }
+
+                    .keynote-content p {
+                        color: var(--dark);
+                        line-height: 1.7;
+                        margin-bottom: 1rem;
+                        text-align: justify;
+                    }
+
+                    @media (max-width: 768px) {
+                        .keynote-header {
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                    }
+                </style>
+
+                <!-- Speaker 1: Prof. Masaki Umejima -->
+                <div class="keynote-card">
+                    <div class="keynote-header">
+                        <div class="speaker-avatar-large">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Prof. Masaki Umejima, Ph.D.</h3>
+                            <div class="role">Project Professor</div>
+                            <div class="affiliation">Keio University Global Research Institute (KGRI), Japan</div>
+                        </div>
+                    </div>
+                    <div class="keynote-body">
+                        <div class="keynote-title-box">
+                            <h4>Keynote Title</h4>
+                            <h3>Cybersecurity and Architecture for Distributed Energy Systems in the Digital Society
+                            </h3>
+                        </div>
+                        <div class="keynote-content">
+                            <h5><i class="fas fa-file-alt"></i> Abstract</h5>
+                            <p>The global energy sector is undergoing a rapid transformation driven by decarbonization,
+                                decentralization, and digitalization. Distributed Energy Resources (DERs), including
+                                renewable energy systems and smart grids, are increasingly interconnected through
+                                digital infrastructures. However, this transformation also introduces significant
+                                challenges in cybersecurity, interoperability, and governance of distributed systems.
+                            </p>
+                            <p>This keynote presentation discusses the architecture and security framework of Energy
+                                Resource Aggregation Business (ERAB), which enables the coordination and management of
+                                distributed energy resources in smart energy ecosystems. The talk highlights the role of
+                                international standards such as ISO/IEC 14543-4-3 (ECHONET Lite) in enabling secure
+                                communication between smart meters, home energy management systems, and energy service
+                                platforms.</p>
+                            <p>The presentation will also explore the development of cybersecurity frameworks for smart
+                                grid infrastructures and distributed energy systems, as well as the collaboration
+                                between government agencies, industry organizations, and international standardization
+                                bodies in building secure and sustainable digital energy systems.</p>
+
+                            <h5><i class="fas fa-address-book"></i> Biography</h5>
+                            <p>Prof. Masaki Umejima is a Project Professor at the Keio University Global Research
+                                Institute (KGRI), Japan. His research focuses on cybersecurity for distributed energy
+                                systems, digital infrastructure architecture, and entrepreneurial education in digital
+                                societies.</p>
+                            <p>He has been actively involved in international standardization initiatives related to
+                                smart energy systems. Prof. Umejima currently serves as the Convener for the Energy
+                                Resource Aggregation Business (ERAB) initiative under the International Electrotechnical
+                                Commission (IEC) System Committee on Smart Energy.</p>
+                            <p>His research has contributed to the global adoption of the ISO/IEC 14543-4-3 (ECHONET
+                                Lite) communication protocol, which is widely used in smart meters and distributed
+                                energy resources. This protocol has been implemented in more than 100 million devices
+                                worldwide to support energy management systems and smart grid applications.</p>
+                            <p>Prof. Umejima also serves as an advisor to the Japanese government on ICT education and
+                                digital platform strategies, contributing to national initiatives related to digital
+                                transformation and cybersecurity in education systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker 2: Prof. Keiko Okawa -->
+                <div class="keynote-card">
+                    <div class="keynote-header">
+                        <div class="speaker-avatar-large">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Prof. Keiko Okawa, Ph.D.</h3>
+                            <div class="role">Advanced Research Project Professor</div>
+                            <div class="affiliation">Cyber Civilization Research Center, Keio University Global Research
+                                Institute (KGRI), Japan</div>
+                        </div>
+                    </div>
+                    <div class="keynote-body">
+                        <div class="keynote-title-box">
+                            <h4>Keynote Title</h4>
+                            <h3>Internet-Based Education and Global Collaboration for Building Resilient Societies</h3>
+                        </div>
+                        <div class="keynote-content">
+                            <h5><i class="fas fa-file-alt"></i> Abstract</h5>
+                            <p>The advancement of digital communication technologies has enabled new forms of
+                                international collaboration in education, research, and knowledge exchange. Universities
+                                and research institutions are increasingly connected through global academic networks
+                                that support open science, collaborative research, and digital learning environments.
+                            </p>
+                            <p>This keynote discusses the development of Internet-based education and international
+                                academic collaboration networks in the Asia-Pacific region. The presentation highlights
+                                the role of digital infrastructure in enabling global citizenship education, resilient
+                                societies, and cross-border knowledge sharing.</p>
+                            <p>The talk will present case studies from the SOI Asia initiative, a regional academic
+                                network that connects universities across multiple countries to support collaborative
+                                learning and research activities. The keynote will also explore how digital platforms
+                                can enhance education accessibility, promote global partnerships, and strengthen
+                                resilience in education systems.</p>
+
+                            <h5><i class="fas fa-address-book"></i> Biography</h5>
+                            <p>Prof. Keiko Okawa is an Advanced Research Project Professor at the Cyber Civilization
+                                Research Center, Keio University Global Research Institute (KGRI), Japan, and Emerita
+                                Professor of Keio University.</p>
+                            <p>Her research focuses on Internet-based education, digital learning environments, and
+                                global academic collaboration. She has played a key role in developing international
+                                education networks and collaborative research initiatives across the Asia-Pacific
+                                region.</p>
+                            <p>Prof. Okawa serves as the Director of SOI Asia, a university collaboration network
+                                connecting more than twenty universities in thirteen countries to support digital
+                                education and collaborative research. She has also served as Director of the Research
+                                Institute for Digital Media and Content at Keio University.</p>
+                            <p>Her contributions to digital education and international collaboration have been
+                                recognized through several awards, including the Ganesa Wirya Jasa Adiutama Award from
+                                Institut Teknologi Bandung and the Keio Award. Her research interests include digital
+                                humanities, open science, and ICT for resilient societies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker 3: Dr. Thanyanan Kengwantrakul -->
+                <div class="keynote-card">
+                    <div class="keynote-header">
+                        <div class="speaker-avatar-large">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Dr. Thanyanan Kengwantrakul</h3>
+                            <div class="role">President and Founder</div>
+                            <div class="affiliation">Accredited Certification Body (CB), ISEM Co., Ltd., Thailand</div>
+                        </div>
+                    </div>
+                    <div class="keynote-body">
+                        <div class="keynote-title-box">
+                            <h4>Keynote Title</h4>
+                            <h3>AI Governance, Data Protection, and Digital Trust in the Intelligent Economy</h3>
+                        </div>
+                        <div class="keynote-content">
+                            <h5><i class="fas fa-file-alt"></i> Abstract</h5>
+                            <p>Artificial intelligence technologies are rapidly transforming industries, digital
+                                services, and organizational operations. While AI provides significant opportunities for
+                                innovation and efficiency, it also introduces challenges related to governance,
+                                transparency, data protection, and cybersecurity.</p>
+                            <p>This keynote presentation discusses governance frameworks and regulatory mechanisms that
+                                support responsible AI deployment. The talk highlights the importance of data protection
+                                compliance, cybersecurity assurance, and digital trust frameworks in ensuring the safe
+                                and ethical implementation of AI systems.</p>
+                            <p>The presentation will also explore the role of ESG governance, digital certification
+                                standards, and organizational risk management in supporting sustainable digital
+                                transformation in the intelligent economy.</p>
+
+                            <h5><i class="fas fa-address-book"></i> Biography</h5>
+                            <p>Dr. Thanyanan Kengwantrakul is a leading expert in artificial intelligence governance,
+                                cybersecurity, and digital transformation. She is the President and Founder of the
+                                Accredited Certification Body (CB) at ISEM Co., Ltd., an organization accredited under
+                                the ASEAN University Network (AUN) framework.</p>
+                            <p>She holds leadership positions in several national professional organizations, including
+                                Vice President of the Artificial Intelligence Entrepreneur Association of Thailand
+                                (AIAT), Vice President of the Data Protection Officer Association (DPOA), and Vice
+                                President of the Thai EdTech Association.</p>
+                            <p>Dr. Kengwantrakul has extensive experience in corporate governance and executive
+                                management, having served in roles such as Chairman of the Board, Chairman of the Audit
+                                Committee, Chairman of the Risk Management Committee, Chief Operating Officer (COO), and
+                                Chief Information Officer (CIO) in public companies.</p>
+                            <p>Her professional expertise includes AI governance, cybersecurity auditing, ESG
+                                compliance, digital risk management, and international certification standards.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Sponsored Section -->
+        <section id="sponsors"
+            style="padding: 4rem 0; background-color: #fff; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">Sponsored nCIT 2026</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <!-- Placeholder for Sponsors -->
+                    <p style="color: var(--dark); font-size: 1.1rem; font-weight: 500;">Coming Soon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co-Organized Section -->
+        <section id="co-organized"
+            style="padding: 4rem 0; background-color: #f8f9fa; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">Co-Organized by</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <img src="img/footer-1024x149.png" alt="Co-Organizers"
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact"
+        style="background-color: var(--bangkok-blue); color: white; padding: 4rem 0 1.5rem; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="footer-content"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+
+                <!-- About & Supported By -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        nCIT 2026<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8; margin-bottom: 1.5rem;">
+                        The 10th International Conference on Information Technology, bringing together researchers,
+                        academicians, and professionals to share knowledge and innovations.
+                    </p>
+                    <div
+                        style="display: inline-flex; gap: 1rem; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; flex-wrap: wrap; margin-top: 1rem;">
+                        <img src="img/CITT-PNG-1_n.png" alt="CITT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/siam.png" alt="Siam University Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/It.jpg" alt="Siam University IT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        Contact Us<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: flex-start;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--bangkok-red); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span><strong>nCIT 2026 Secretariat</strong><br>Faculty of Information Technology<br>Siam
+                                University, Bangkok, Thailand</span>
+                        </p>
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: center;">
+                            <i class="fas fa-envelope"
+                                style="color: var(--bangkok-gold); font-size: 1.2rem; margin-right: 15px;"></i>
+                            <a href="mailto:incit2026@siam.edu"
+                                style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s;">incit2026@siam.edu</a>
+                        </p>
+                        <p style="margin-bottom: 0; display: flex; align-items: flex-start;">
+                            <i class="fas fa-phone-alt"
+                                style="color: #1ea24a; font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span>+66 (0) 2-457-0068, 2-867-8000<br>ext. 5130</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright"
+                style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 2rem;">
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">&copy; 2026 nCIT -
+                    International Conference on Information Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

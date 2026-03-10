@@ -1,0 +1,326 @@
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Tablet Devices (768px - 992px) */
+@media (max-width: 992px) {
+
+    /* Header */
+    .logo-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-date h2 {
+        font-size: 1rem;
+    }
+
+    .header-buttons-group {
+        gap: 8px;
+    }
+
+    .btn-download-nav,
+    .btn-register {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text,
+    .about-image {
+        width: 100%;
+    }
+
+    /* Download Card */
+    .download-card {
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .download-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .download-icon i {
+        font-size: 2rem;
+    }
+
+    .download-info h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile Devices (576px - 768px) */
+@media (max-width: 768px) {
+
+    /* Header */
+    .header-top {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navigation */
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .menu>li {
+        width: 100%;
+    }
+
+    .menu>li>a {
+        padding: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        background-color: #f8f9fa;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-sub-content {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .dropdown-sub.active .dropdown-sub-content {
+        display: block;
+    }
+
+    /* Header Buttons Group */
+    .header-buttons-group {
+        display: none;
+    }
+
+    /* Mobile Buttons in Menu */
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .mobile-buttons .btn-download-nav,
+    .mobile-buttons .btn-register {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+        min-height: 50vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Section Titles */
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Download Card */
+    .download-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .download-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .download-icon i {
+        font-size: 2rem;
+    }
+
+    .download-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-download {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    /* Coming Soon */
+    .coming-soon {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .coming-soon-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .coming-soon-icon i {
+        font-size: 1.8rem;
+    }
+
+    .coming-soon-content {
+        text-align: center;
+    }
+
+    .coming-soon-content h4 {
+        font-size: 1.5rem;
+    }
+
+    .coming-soon-content p {
+        font-size: 1rem;
+    }
+
+    /* Dates Container */
+    .dates-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Tracks Container */
+    .tracks-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Modern Cards Mobile Padding */
+    .date-card,
+    .track-card,
+    .committee-card,
+    .info-card,
+    .proceedings-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    /* Bangkok Theme Mobile */
+    .bangkok-theme {
+        padding: 4rem 1rem;
+    }
+
+    .bangkok-theme h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Small Mobile Devices (小于 576px) */
+@media (max-width: 576px) {
+
+    /* Header */
+    .logo-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-date {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Section Titles */
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Download Card */
+    .download-card {
+        padding: 1.5rem;
+    }
+
+    .download-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .download-info p {
+        font-size: 1rem;
+    }
+
+    .btn-download {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Coming Soon */
+    .coming-soon {
+        padding: 1.5rem 1rem;
+    }
+
+    .coming-soon-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .coming-soon-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}

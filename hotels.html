@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำโรงแรม - nCIT 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/presentation.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>nCIT 2026</h1>
+                    </div>
+                </div>
+                <div class="header-date">
+                    <h2>12-14 พฤศจิกายน 2569</h2>
+                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="menu" id="mainMenu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+
+                    <!-- ncit2026 -->
+                    <!--<li class="dropdown">
+                        <a href="">nCIT2026 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="keynote.html">วิทยากรรับเชิญ</a></li>
+                            <li><a href="committee.html">คณะกรรมการ</a></li>
+                            
+                        </ul>
+                    </li>-->
+
+                    <!-- Program -->
+                    <li class="dropdown">
+                        <a href="">กำหนดการ <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="proceedings.html">Proceedings</a></li>
+                            <li><a href="presentation.html">แนวทางการนำเสนอผลงาน</a></li>
+
+                            <!-- Sub-dropdown -->
+                            <li class="dropdown-sub">
+                                <a href="program.html">โปรแกรมกำหนดการ <i class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-sub-content">
+                                    <li><a href="online.html">Online</a></li>
+                                    <li><a href="onsite.html">Onsite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Submission -->
+                    <li class="dropdown">
+                        <a href="">การส่งผลงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="submission.html">การส่งบทความ</a></li>
+                            <!--<li><a href="camera.html">คู่มือสำหรับเอกสารฉบับสมบูรณ์</a></li>
+                            <li><a href="sessions.html">รอบปกติ และ รอบพิเศษ</a></li>-->
+                        </ul>
+                    </li>
+
+                    <!-- Venue -->
+                    <li class="dropdown">
+                        <a href="">สถานที่จัดงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="venue.html">สถานที่จัดงาน</a></li>
+                            <li><a href="hotels.html">แนะนำโรงแรม</a></li>
+                            <li><a href="transport.html">การเดินทาง</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li class="menu-right register-btn">
+                        <a href="registration.html" class="btn-register">ลงทะเบียน</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>แนะนำโรงแรม</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="content">
+            <div class="container">
+                <div class="section-title">
+                    <h2>แนะนำโรงแรม</h2>
+                </div>
+                <!-- Recommended Hotels -->
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                    <p style="font-size: 1.1rem; color: var(--dark);">เพื่อความสะดวกของผู้เข้าร่วมประชุม
+                        เราได้จัดเตรียมรายชื่อโรงแรมที่แนะนำซึ่งตั้งอยู่ใกล้มหาวิทยาลัยสยาม หรือตามแนวเส้นทางรถไฟฟ้า BTS
+                        / รถไฟใต้ดิน MRT</p>
+                </div>
+
+                <div class="tracks-container"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+
+                    <!-- Hotel 1 -->
+                    <div
+                        style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, var(--bangkok-blue), #112a52); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 5rem;">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 style="color: var(--bangkok-blue); margin: 0; font-size: 1.3rem;">The Quarter
+                                    Wutthakat by UHG</h3>
+                                <div style="color: var(--bangkok-gold); font-size: 0.9rem;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p style="color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                โรงแรมทันสมัยและสะดวกสบาย ตั้งอยู่ห่างจากสถานีบางหว้าเพียงหนึ่งสถานี BTS
+                                เหมาะสำหรับผู้เข้าร่วมประชุมที่มองหาความสะดวกสบายและราคาที่คุ้มค่ากับคุณภาพ</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--dark);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"
+                                        style="color: var(--bangkok-red); width: 20px;"></i> สถานีรถไฟฟ้า BTS วุฒากาศ
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-car"
+                                        style="color: var(--bangkok-blue); width: 20px;"></i> 10 นาที ถึงมหาวิทยาลัยสยาม
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-tag"
+                                        style="color: var(--bangkok-gold); width: 20px;"></i> ~ 1,200 - 1,500 บาท/คืน
+                                </li>
+                            </ul>
+                            <a href="https://www.quarterwutthakat.com/" target="_blank"
+                                style="display: block; text-align: center; margin-top: 1.5rem; padding: 10px; background-color: #7a8a9b; border: 1px solid #ddd; border-radius: 5px; color: var(--bangkok-blue); font-weight: 500; text-decoration: none; transition: background 0.3s;">เยี่ยมชมเว็บไซต์
+                                <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 2 -->
+                    <div
+                        style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, var(--bangkok-gold), #b38f2b); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 5rem;">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 style="color: var(--bangkok-blue); margin: 0; font-size: 1.3rem;">Kaya Heritage
+                                    Hotel</h3>
+                                <div style="color: var(--bangkok-gold); font-size: 0.9rem;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p style="color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                โรงแรมบูติกเชิงมรดกที่นำเสนอประสบการณ์ทางวัฒนธรรมไทยที่โดดเด่น
+                                ตั้งอยู่ค่อนข้างใกล้กับมหาวิทยาลัยและให้บรรยากาศที่เงียบสงบและผ่อนคลาย</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--dark);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"
+                                        style="color: var(--bangkok-red); width: 20px;"></i> ย่านปิ่นเกล้า / บางกอกน้อย
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-car"
+                                        style="color: var(--bangkok-blue); width: 20px;"></i> 15 นาที ถึงมหาวิทยาลัยสยาม
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-tag"
+                                        style="color: var(--bangkok-gold); width: 20px;"></i> ~ 1,400 - 1,800 บาท/คืน
+                                </li>
+                            </ul>
+                            <a href="https://www.kayaheritagehotel.com/" target="_blank"
+                                style="display: block; text-align: center; margin-top: 1.5rem; padding: 10px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; color: var(--bangkok-blue); font-weight: 500; text-decoration: none; transition: background 0.3s;">เยี่ยมชมเว็บไซต์
+                                <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 3 -->
+                    <div
+                        style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, var(--bangkok-red), #991c26); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 5rem;">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 style="color: var(--bangkok-blue); margin: 0; font-size: 1.3rem;">Avani+ Riverside
+                                    Bangkok</h3>
+                                <div style="color: var(--bangkok-gold); font-size: 0.9rem;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p style="color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                สำหรับผู้เข้าร่วมประชุมที่มองหาความหรูหรา
+                                โรงแรมริมแม่น้ำแห่งนี้มีทิวทัศน์ที่สวยงามของแม่น้ำเจ้าพระยา ห้องอาหารระดับพรีเมียม
+                                และสิ่งอำนวยความสะดวกครบครันพร้อมทางเชื่อมตรงไปยังห้างสรรพสินค้า</p>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--dark);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"
+                                        style="color: var(--bangkok-red); width: 20px;"></i> ถนนเจริญนคร</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-car"
+                                        style="color: var(--bangkok-blue); width: 20px;"></i> 25 นาที ถึงมหาวิทยาลัยสยาม
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-tag"
+                                        style="color: var(--bangkok-gold); width: 20px;"></i> ~ 4,000 - 6,000 บาท/คืน
+                                </li>
+                            </ul>
+                            <a href="https://www.avanihotels.com/en/riverside-bangkok" target="_blank"
+                                style="display: block; text-align: center; margin-top: 1.5rem; padding: 10px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; color: var(--bangkok-blue); font-weight: 500; text-decoration: none; transition: background 0.3s;">เยี่ยมชมเว็บไซต์
+                                <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 4 -->
+                    <div
+                        style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, #1ea24a, #137333); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 5rem;">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 style="color: var(--bangkok-blue); margin: 0; font-size: 1.3rem;">Ibis Bangkok
+                                    Riverside</h3>
+                                <div style="color: var(--bangkok-gold); font-size: 0.9rem;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p style="color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                โรงแรมที่สะดวกสบายและคุ้มค่าราคา ตั้งอยู่ริมฝั่งแม่น้ำเจ้าพระยา
+                                มีสระว่ายน้ำกลางแจ้งที่สดชื่น และสามารถเดินทางข้ามแม่น้ำด้วยเรือข้ามฟากได้อย่างง่ายดาย
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--dark);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"
+                                        style="color: var(--bangkok-red); width: 20px;"></i> ซอยเจริญนคร 17</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-subway"
+                                        style="color: #1ea24a; width: 20px;"></i> สถานีรถไฟฟ้ากรุงธนบุรี</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-tag"
+                                        style="color: var(--bangkok-gold); width: 20px;"></i> ~ 1,500 - 2,200 บาท/คืน
+                                </li>
+                            </ul>
+                            <a href="https://all.accor.com/hotel/7026/index.en.shtml" target="_blank"
+                                style="display: block; text-align: center; margin-top: 1.5rem; padding: 10px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; color: var(--bangkok-blue); font-weight: 500; text-decoration: none; transition: background 0.3s;">เยี่ยมชมเว็บไซต์
+                                <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 5 -->
+                    <div
+                        style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.03);">
+                        <div
+                            style="height: 200px; background: linear-gradient(135deg, var(--bangkok-blue), #2a4a8c); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 5rem;">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div style="padding: 2rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 style="color: var(--bangkok-blue); margin: 0; font-size: 1.3rem;">Siam Champs
+                                    Elyseesi</h3>
+                                <div style="color: var(--bangkok-gold); font-size: 0.9rem;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p style="color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                โรงแรมบูติกที่หรูหราผสมผสานสถาปัตยกรรมยุโรปคลาสสิกเข้ากับสัมผัสแบบไทยสมัยใหม่
+                                ตั้งอยู่ใกล้กับย่านเมืองเก่าอันทรงคุณค่าทางประวัติศาสตร์ของกรุงเทพมหานครและสถานที่ท่องเที่ยวทางวัฒนธรรมที่สำคัญ
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--dark);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"
+                                        style="color: var(--bangkok-red); width: 20px;"></i> ถนนราชดำเนินกลาง</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-car"
+                                        style="color: var(--bangkok-blue); width: 20px;"></i> 20 นาที ถึงมหาวิทยาลัยสยาม
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-tag"
+                                        style="color: var(--bangkok-gold); width: 20px;"></i> ~ 2,000 - 3,500 บาท/คืน
+                                </li>
+                            </ul>
+                            <a href="https://siamchampselyseesi.com/" target="_blank"
+                                style="display: block; text-align: center; margin-top: 1.5rem; padding: 10px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; color: var(--bangkok-blue); font-weight: 500; text-decoration: none; transition: background 0.3s;">เยี่ยมชมเว็บไซต์
+                                <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    style="margin-top: 4rem; padding: 1.5rem; background-color: #fff; border-left: 4px solid var(--bangkok-red); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+                    <h4 style="color: var(--bangkok-red); margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i>
+                        ข้อจำกัดความรับผิดชอบในการจองที่พัก</h4>
+                    <p style="color: var(--dark); font-size: 0.95rem; margin: 0;">
+                        คณะผู้จัดการประชุมไม่ได้เป็นผู้รับผิดชอบหรือดำเนินการเกี่ยวกับการจองโรงแรมใดๆ
+                        กรุณาติดต่อทางโรงแรมโดยตรงหรือใช้แพลตฟอร์มการจองออนไลน์ที่คุณสะดวก (เช่น Agoda, Booking.com,
+                        Expedia) เพื่อสำรองห้องพักของคุณ เราขอแนะนำให้คุณจองที่พักล่วงหน้า
+                        โดยเฉพาะในช่วงฤดูกาลท่องเที่ยวที่มีผู้คนพลุกพล่านในเดือนพฤศจิกายน</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sponsored Section -->
+        <section id="sponsors"
+            style="padding: 4rem 0; background-color: #fff; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">ผู้สนับสนุน nCIT 2026</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <!-- Placeholder for Sponsors -->
+                    <p style="color: var(--dark); font-size: 1.1rem; font-weight: 500;">เร็วๆ นี้</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co-Organized Section -->
+        <section id="co-organized"
+            style="padding: 4rem 0; background-color: #f8f9fa; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">ผู้ร่วมจัดงาน</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <img src="img/footer-1024x149.png" alt="Co-Organizers"
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact"
+        style="background-color: var(--bangkok-blue); color: white; padding: 4rem 0 1.5rem; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="footer-content"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+
+                <!-- About & Supported By -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        nCIT 2026<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8; margin-bottom: 1.5rem;">
+                        งานประชุมวิชาการระดับชาติทางด้านเทคโนโลยีสารสนเทศ ครั้งที่ 10 เพื่อรวบรวมนักวิจัย คณาจารย์
+                        และมืออาชีพ ร่วมแบ่งปันความรู้และนวัตกรรมใหม่ๆ
+                    </p>
+                    <div
+                        style="display: inline-flex; gap: 1rem; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; flex-wrap: wrap; margin-top: 1rem;">
+                        <img src="img/CITT-PNG-1_n.png" alt="CITT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/siam.png" alt="Siam University Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/It.jpg" alt="Siam University IT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        ติดต่อเรา<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: flex-start;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--bangkok-red); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span><strong>สำนักจัดการประชุม nCIT
+                                    2026</strong><br>คณะเทคโนโลยีสารสนเทศ<br>มหาวิทยาลัยสยาม, กรุงเทพมหานคร,
+                                ประเทศไทย</span>
+                        </p>
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: center;">
+                            <i class="fas fa-envelope"
+                                style="color: var(--bangkok-gold); font-size: 1.2rem; margin-right: 15px;"></i>
+                            <a href="mailto:incit2026@siam.edu"
+                                style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s;">ncit2026@siam.edu</a>
+                        </p>
+                        <p style="margin-bottom: 0; display: flex; align-items: flex-start;">
+                            <i class="fas fa-phone-alt"
+                                style="color: #1ea24a; font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span>+66 (0) 2-457-0068, 2-867-8000<br>ต่อ 5130</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright"
+                style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 2rem;">
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">&copy; 2026 nCIT -
+                    การประชุมวิชาการระดับชาติทางด้านเทคโนโลยีสารสนเทศ สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

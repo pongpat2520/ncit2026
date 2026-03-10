@@ -1,0 +1,220 @@
+/* Presentation Guidelines CSS */
+.guidelines-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.guideline-duration {
+    background: linear-gradient(135deg, #1e3d6f, #152b4d);
+    color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(30, 61, 111, 0.2);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.guideline-duration:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(30, 61, 111, 0.3);
+}
+
+.duration-icon {
+    font-size: 3.5rem;
+    color: #e6c35c; /* bangkok-gold */
+    background: rgba(255,255,255,0.1);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.duration-text h3 {
+    font-size: 1.8rem;
+    color: #e6c35c;
+    margin-bottom: 0.5rem;
+}
+
+.duration-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.guideline-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border-top: 5px solid transparent;
+}
+
+.guideline-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.guideline-card.onsite {
+    border-top-color: #c12a35; /* bangkok-red */
+}
+
+.guideline-card.online {
+    border-top-color: #1e3d6f; /* bangkok-blue */
+}
+
+.card-header {
+    padding: 2rem 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: #f8f9fa;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.guideline-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.onsite .card-icon {
+    color: #c12a35;
+}
+
+.online .card-icon {
+    color: #1e3d6f;
+}
+
+.card-header h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.custom-list li:last-child {
+    margin-bottom: 0;
+}
+
+.custom-list li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.2rem;
+}
+
+.onsite .custom-list li i {
+    color: #c12a35;
+}
+
+.online .custom-list li i {
+    color: #1e3d6f;
+}
+
+.additional-notes {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 4rem;
+    border-left: 5px solid #e6c35c; /* bangkok-gold */
+    transition: all 0.3s ease;
+}
+
+.additional-notes:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.notes-header {
+    background: #fdfbf7;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.notes-header h3 {
+    color: #8c7322;
+    margin: 0;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notes-content {
+    padding: 2rem;
+}
+
+.custom-notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-notes-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.custom-notes-list li::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #e6c35c;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .guideline-duration {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .duration-icon {
+        width: 80px; 
+        height: 80px; 
+        font-size: 2.5rem;
+    }
+}

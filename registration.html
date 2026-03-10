@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียน - nCIT 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/presentation.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>nCIT 2026</h1>
+                    </div>
+                </div>
+                <div class="header-date">
+                    <h2>12-14 พฤศจิกายน 2569</h2>
+                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="menu" id="mainMenu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+
+                    <!-- ncit2026 -->
+                    <!--<li class="dropdown">
+                        <a href="">nCIT2026 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="keynote.html">วิทยากรรับเชิญ</a></li>
+                            <li><a href="committee.html">คณะกรรมการ</a></li>
+                            
+                        </ul>
+                    </li>-->
+
+                    <!-- Program -->
+                    <li class="dropdown">
+                        <a href="">กำหนดการ <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="proceedings.html">Proceedings</a></li>
+                            <li><a href="presentation.html">แนวทางการนำเสนอผลงาน</a></li>
+
+                            <!-- Sub-dropdown -->
+                            <li class="dropdown-sub">
+                                <a href="program.html">โปรแกรมกำหนดการ <i class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-sub-content">
+                                    <li><a href="online.html">Online</a></li>
+                                    <li><a href="onsite.html">Onsite</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Submission -->
+                    <li class="dropdown">
+                        <a href="">การส่งผลงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="submission.html">การส่งบทความ</a></li>
+                            <!--<li><a href="camera.html">คู่มือสำหรับเอกสารฉบับสมบูรณ์</a></li>
+                            <li><a href="sessions.html">รอบปกติ และ รอบพิเศษ</a></li>-->
+                        </ul>
+                    </li>
+
+                    <!-- Venue -->
+                    <li class="dropdown">
+                        <a href="">สถานที่จัดงาน <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="venue.html">สถานที่จัดงาน</a></li>
+                            <li><a href="hotels.html">แนะนำโรงแรม</a></li>
+                            <li><a href="transport.html">การเดินทาง</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li class="menu-right register-btn">
+                        <a href="registration.html" class="btn-register">ลงทะเบียน</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>ลงทะเบียน</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="content">
+            <div class="container">
+                <div class="section-title">
+                    <h2>ข้อมูลการลงทะเบียน</h2>
+                </div>
+
+                <style>
+                    .registration-section {
+                        background: #fff;
+                        border-radius: 12px;
+                        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+                        padding: 2.5rem;
+                        margin-bottom: 2.5rem;
+                        border-top: 4px solid var(--bangkok-blue);
+                    }
+
+                    .registration-section h3 {
+                        color: var(--bangkok-red);
+                        margin-bottom: 1.5rem;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .registration-section p {
+                        margin-bottom: 1rem;
+                        color: var(--dark);
+                    }
+
+                    .registration-section ul {
+                        margin-left: 1.5rem;
+                        margin-bottom: 1.5rem;
+                        color: var(--dark);
+                    }
+
+                    .registration-section li {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .registration-table table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 2rem;
+                        background: #fff;
+                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+                    }
+
+                    .registration-table th,
+                    .registration-table td {
+                        padding: 1rem;
+                        text-align: left;
+                        border: 1px solid #e0e0e0;
+                    }
+
+                    .registration-table th {
+                        background: var(--bangkok-blue);
+                        color: white;
+                        font-weight: 600;
+                    }
+
+                    .registration-table tr:nth-child(even) {
+                        background: #f8f9fa;
+                    }
+
+                    .registration-table tr:hover {
+                        background: #f1f3f5;
+                    }
+
+                    .alert-note {
+                        background: #fff3cd;
+                        color: #856404;
+                        padding: 1rem;
+                        border-left: 4px solid #ffc107;
+                        border-radius: 4px;
+                        margin-top: 1.5rem;
+                    }
+
+                    .method-box {
+                        background: #f8f9fa;
+                        border: 1px solid #e9ecef;
+                        border-radius: 8px;
+                        padding: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .method-box h4 {
+                        color: var(--bangkok-blue);
+                        margin-bottom: 1rem;
+                        font-size: 1.2rem;
+                    }
+                </style>
+
+                <div class="registration-section">
+                    <h3><i class="fas fa-lock"></i> สถานะการลงทะเบียน</h3>
+                    <p><strong>ระบบลงทะเบียนยังไม่เปิดให้บริการ</strong> โปรดกลับมาตรวจสอบอีกครั้งในภายหลัง
+                        ระบบลงทะเบียนจะเปิดให้บริการในเร็วๆ นี้</p>
+                </div>
+
+                <div class="registration-section">
+                    <h3><i class="fas fa-user-edit"></i> การลงทะเบียนสำหรับผู้นิพนธ์ (Author Registration)</h3>
+                    <ul>
+                        <li>บทความที่ได้รับการตอบรับแต่ละบทความ จะต้องมีผู้นิพนธ์ลงทะเบียนอย่างน้อยหนึ่งท่าน</li>
+                    </ul>
+                </div>
+
+                <div class="registration-section">
+                    <h3><i class="fas fa-money-bill-wave"></i> อัตราค่าลงทะเบียน</h3>
+                    <p>อัตราค่าลงทะเบียนทั้งหมดแสดงในสกุลเงินบาท (THB)</p>
+
+                    <div class="registration-table" style="overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ประเภท</th>
+                                    <th>ประเภทผู้เข้าร่วม</th>
+                                    <th>Onsite (บาท)</th>
+                                    <th>Online (บาท)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4"><strong>ลงทะเบียนล่วงหน้า (Early Bird)</strong></td>
+                                    <td>สมาชิก IEEE (จำเป็นต้องระบุหมายเลขสมาชิก)</td>
+                                    <td>16,000.00</td>
+                                    <td>13,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>บุคคลทั่วไป (ไม่ใช่สมาชิก IEEE)</td>
+                                    <td>18,000.00</td>
+                                    <td>15,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>นิสิต/นักศึกษา (จำเป็นต้องแสดงบัตรประจำตัวนักศึกษา)</td>
+                                    <td>13,000.00</td>
+                                    <td>10,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>ผู้เข้าร่วมงาน (ไม่มีบทความ)</td>
+                                    <td>5,000.00</td>
+                                    <td>5,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4"><strong>ลงทะเบียนปกติ (Regular)</strong></td>
+                                    <td>สมาชิก IEEE (จำเป็นต้องระบุหมายเลขสมาชิก)</td>
+                                    <td>18,000.00</td>
+                                    <td>15,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>บุคคลทั่วไป (ไม่ใช่สมาชิก IEEE)</td>
+                                    <td>20,000.00</td>
+                                    <td>17,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>นิสิต/นักศึกษา (จำเป็นต้องแสดงบัตรประจำตัวนักศึกษา)</td>
+                                    <td>15,000.00</td>
+                                    <td>12,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>ผู้เข้าร่วมงาน (ไม่มีบทความ)</td>
+                                    <td>5,000.00</td>
+                                    <td>5,000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-note"
+                        style="background-color: #f8f9fa; border-left-color: var(--bangkok-blue); color: var(--dark); margin-top: 1rem;">
+                        <i class="fas fa-info-circle" style="color: var(--bangkok-blue);"></i>
+                        <strong>หมายเหตุ:</strong>
+                        มีส่วนลด 10% สำหรับบทความที่ 2 และ 3
+                        ในกรณีที่ผู้ลงทะเบียนท่านเดียวกันส่งบทความที่ได้รับการตอบรับเป็นบทความที่ 2 และ 3
+                        ผู้จัดงานขอสงวนสิทธิ์ในการให้ส่วนลดดังกล่าวสูงสุดไม่เกิน 3 บทความ
+                        หากท่านมีบทความที่ได้รับการตอบรับมากกว่า 1 บทความ และประสงค์จะขอรับส่วนลด 10%
+                        โปรดติดต่อทางอีเมล (<a href="mailto:incit2026@siam.edu">ncit2026@siam.edu</a>)
+                        เพื่อขอรับรหัสส่วนลด
+                    </div>
+                </div>
+
+                <div class="registration-section">
+                    <h3><i class="fas fa-gift"></i> สิทธิประโยชน์สำหรับผู้ลงทะเบียนรวม:</h3>
+                    <ul>
+                        <li>ชุดอุปกรณ์ต้อนรับ (Welcome kit)</li>
+                        <li>อาหารกลางวันและอาหารว่าง</li>
+                        <li>งานเลี้ยงต้อนรับ (Welcome dinner)</li>
+                        <li>งานเลี้ยงรับรอง (Banquet)</li>
+                    </ul>
+                    <div class="alert-note">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>หมายเหตุ:</strong>
+                        สิทธิประโยชน์ข้างต้นไม่รวมอยู่ในการลงทะเบียนสำหรับการนำเสนอแบบออนไลน์ / การเข้าร่วมงานแบบออนไลน์
+                    </div>
+                </div>
+
+                <div class="registration-section">
+                    <h3><i class="fas fa-credit-card"></i> ช่องทางการชำระเงิน</h3>
+                    <p>nCIT 2026 รองรับการชำระเงิน 2 ช่องทาง ดังนี้:</p>
+                    <p><strong>หากท่านต้องการส่งบทความหลายบทความ โปรดดำเนินการลงทะเบียนแยกสำหรับแต่ละบทความ</strong></p>
+
+                    <div class="method-box" style="text-align: center; padding: 3rem;">
+                        <h4 style="font-size: 1.5rem; color: var(--gray); margin-bottom: 0;">
+                            <i class="fas fa-hourglass-half"
+                                style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                            เร็วๆ นี้ (Coming Soon)
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Sponsored Section -->
+        <section id="sponsors"
+            style="padding: 4rem 0; background-color: #fff; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">ผู้สนับสนุน nCIT 2026</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <!-- Placeholder for Sponsors -->
+                    <p style="color: var(--dark); font-size: 1.1rem; font-weight: 500;">เร็วๆ นี้</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co-Organized Section -->
+        <section id="co-organized"
+            style="padding: 4rem 0; background-color: #f8f9fa; text-align: center; border-top: 1px solid #eee;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="font-size: 2rem;">ผู้ร่วมจัดงาน</h2>
+                </div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; padding-top: 2rem;">
+                    <img src="img/footer-1024x149.png" alt="Co-Organizers"
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact"
+        style="background-color: var(--bangkok-blue); color: white; padding: 4rem 0 1.5rem; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="footer-content"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+
+                <!-- About & Supported By -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        nCIT 2026<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8; margin-bottom: 1.5rem;">
+                        งานประชุมวิชาการระดับชาติทางด้านเทคโนโลยีสารสนเทศ ครั้งที่ 10 เพื่อรวบรวมนักวิจัย คณาจารย์
+                        และมืออาชีพ ร่วมแบ่งปันความรู้และนวัตกรรมใหม่ๆ
+                    </p>
+                    <div
+                        style="display: inline-flex; gap: 1rem; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 10px; flex-wrap: wrap; margin-top: 1rem;">
+                        <img src="img/CITT-PNG-1_n.png" alt="CITT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/siam.png" alt="Siam University Logo"
+                            style="height: 55px; width: auto; object-fit: contain; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                        <img src="img/It.jpg" alt="Siam University IT Logo"
+                            style="height: 55px; width: auto; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section">
+                    <h3
+                        style="color: var(--bangkok-gold); font-size: 1.5rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 10px;">
+                        ติดต่อเรา<span
+                            style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--bangkok-gold);"></span>
+                    </h3>
+                    <div style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: flex-start;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--bangkok-red); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span><strong>สำนักจัดการประชุม nCIT
+                                    2026</strong><br>คณะเทคโนโลยีสารสนเทศ<br>มหาวิทยาลัยสยาม, กรุงเทพมหานคร,
+                                ประเทศไทย</span>
+                        </p>
+                        <p style="margin-bottom: 1.2rem; display: flex; align-items: center;">
+                            <i class="fas fa-envelope"
+                                style="color: var(--bangkok-gold); font-size: 1.2rem; margin-right: 15px;"></i>
+                            <a href="mailto:incit2026@siam.edu"
+                                style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s;">ncit2026@siam.edu</a>
+                        </p>
+                        <p style="margin-bottom: 0; display: flex; align-items: flex-start;">
+                            <i class="fas fa-phone-alt"
+                                style="color: #1ea24a; font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                            <span>+66 (0) 2-457-0068, 2-867-8000<br>ต่อ 5130</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright"
+                style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 2rem;">
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; margin: 0;">&copy; 2026 nCIT -
+                    การประชุมวิชาการระดับชาติทางด้านเทคโนโลยีสารสนเทศ สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
